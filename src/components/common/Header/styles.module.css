@@ -1,0 +1,9 @@
+.logo_img {
+	max-width: 50% !important;
+}
+
+.ul_Style {
+	width: 100% !important;
+	display: flex;
+	flex-wrap: nowrap;
+}

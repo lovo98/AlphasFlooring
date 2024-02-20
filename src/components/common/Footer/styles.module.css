@@ -1,0 +1,13 @@
+.text_position {
+	text-align: end;
+}
+
+.text_position > ul > li {
+	width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+	.text_position {
+		text-align: center;
+	}
+}
