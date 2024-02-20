@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "~assets/images/logo.png";
 import style from "./styles.module.css";
 
 const index = () => {
+	const [isNavActive, setIsNavActive] = useState(false);
+
+	const handleNavToggle = () => {
+		setIsNavActive(!isNavActive);
+	};
+
+	const handleOutsideClick = (e) => {
+		const mainNav = document.getElementById("header-nav");
+		const navToggle = document.getElementById("header-nav-toggle");
+
+		if (
+			!mainNav.contains(e.target) &&
+			e.target !== mainNav &&
+			e.target !== navToggle
+		) {
+			setIsNavActive(false);
+		}
+	};
+
+	// Agrega el event listener al montar el componente
+	useEffect(() => {
+		document.addEventListener("click", handleOutsideClick);
+		return () => {
+			document.removeEventListener("click", handleOutsideClick);
+		};
+	}, []);
 	return (
 		<header className="site-header invert-color mt-10">
 			<div className="container">
@@ -15,6 +41,7 @@ const index = () => {
 						</h1>
 					</div>
 					<button
+						onClick={handleNavToggle}
 						id="header-nav-toggle"
 						className="header-nav-toggle"
 						aria-controls="primary-menu"
@@ -25,15 +52,16 @@ const index = () => {
 							<span className="hamburger-inner"></span>
 						</span>
 					</button>
-					<nav id="header-nav" className="header-nav">
+					<nav
+						style={{ maxHeight: isNavActive ? "240px" : "0" }}
+						id="header-nav"
+						className={`header-nav ${isNavActive ? "is-active" : ""}`}
+					>
 						<div className="header-nav-inner">
 							<ul className={`list-reset text-xs header-nav-right`}>
 								<li>
 									<a href="additional.html">About Us</a>
 								</li>
-								{/* <li>
-									<a href="additional.html">Special features</a>
-								</li> */}
 								<li>
 									<a href="additional.html">Testimonials</a>
 								</li>
@@ -44,16 +72,6 @@ const index = () => {
 									<a href="additional.html">Contact Us</a>
 								</li>
 							</ul>
-							{/* <ul className="list-reset header-nav-right">
-								<li>
-									<a
-										className="button button-primary button-wide-mobile button-wide-mobile button-sm"
-										href="signup.html"
-									>
-										Sign up
-									</a>
-								</li>
-							</ul> */}
 						</div>
 					</nav>
 				</div>
