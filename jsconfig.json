@@ -13,6 +13,12 @@
 			],
 			"~/*": [
 				"src/*"
+			],
+			"~AboutUs/*": [
+				"src/components/AboutUs/*"
+			],
+			"~ContactUS/*": [
+				"src/components/ContactUS/*"
 			]
 		}
 	}

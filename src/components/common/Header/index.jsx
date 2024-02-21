@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import logo from "~assets/images/logo.png";
 import style from "./styles.module.css";
+import { useNavigate } from "react-router-dom";
 
 const index = () => {
 	const [isNavActive, setIsNavActive] = useState(false);
+	const navigate = useNavigate();
 
 	const handleNavToggle = () => {
 		setIsNavActive(!isNavActive);
@@ -30,13 +32,17 @@ const index = () => {
 		};
 	}, []);
 	return (
-		<header className="site-header invert-color mt-10">
+		<header className="site-header invert-color">
 			<div className="container">
 				<div className="site-header-inner">
 					<div className="brand">
 						<h1 className="m-0">
-							<a href="index.html">
-								<img src={logo} alt="Tidy" className={style.logo_img} />
+							<a onClick={() => navigate("/")}>
+								<img
+									src={logo}
+									alt="Tidy"
+									className={`${style.logo_img} ${style.cursor_pointer}`}
+								/>
 							</a>
 						</h1>
 					</div>
@@ -60,16 +66,26 @@ const index = () => {
 						<div className="header-nav-inner">
 							<ul className={`list-reset text-xs header-nav-right`}>
 								<li>
-									<a href="additional.html">About Us</a>
+									<a
+										onClick={() => navigate("/about-us")}
+										className={style.cursor_pointer}
+									>
+										About Us
+									</a>
 								</li>
 								<li>
-									<a href="additional.html">Testimonials</a>
+									<a className={style.cursor_pointer}>Testimonials</a>
 								</li>
 								<li>
-									<a href="additional.html">Services</a>
+									<a className={style.cursor_pointer}>Services</a>
 								</li>
 								<li>
-									<a href="additional.html">Contact Us</a>
+									<a
+										onClick={() => navigate("/contact-us")}
+										className={style.cursor_pointer}
+									>
+										Contact Us
+									</a>
 								</li>
 							</ul>
 						</div>

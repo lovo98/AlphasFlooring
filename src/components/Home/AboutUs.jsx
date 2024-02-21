@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const AboutUs = () => {
+	const navigate = useNavigate();
 	return (
 		<section className="features-tabs section center-content has-bottom-divider">
 			<div className="container">
@@ -16,6 +18,12 @@ const AboutUs = () => {
 							</p>
 						</div>
 					</div>
+					<a
+						className="button button-primary button-wide-mobile"
+						onClick={() => navigate("/about-us")}
+					>
+						See more
+					</a>
 				</div>
 			</div>
 		</section>
