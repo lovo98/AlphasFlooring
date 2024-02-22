@@ -90,7 +90,7 @@ const index = () => {
 								>
 									<a
 										className={style.cursor_pointer}
-										onClick={() => navigate("/testimonials")}
+										onClick={() => navigateToUrl("/testimonials")}
 									>
 										Testimonials
 									</a>
@@ -102,7 +102,7 @@ const index = () => {
 								>
 									<a
 										className={style.cursor_pointer}
-										onClick={() => navigate("/services")}
+										onClick={() => navigateToUrl("/services")}
 									>
 										Services
 									</a>
