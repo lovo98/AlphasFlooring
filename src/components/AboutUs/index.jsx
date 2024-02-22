@@ -1,8 +1,10 @@
 import React from "react";
 import style from "./styles.module.css";
 import about_us_img from "~assets/images/about-us.svg";
+import { useNavigate } from "react-router-dom";
 
 const index = () => {
+	const navigate = useNavigate();
 	return (
 		<section className="features-tabs section center-content has-bottom-divider mt-50">
 			<div className="container">
@@ -41,6 +43,12 @@ const index = () => {
 									enviroment.
 									<br />
 									<br />
+									<a
+										className="button button-primary button-wide-mobile"
+										onClick={() => navigate("/contact-us")}
+									>
+										We are happy to help you
+									</a>
 								</p>
 							</div>
 						</div>

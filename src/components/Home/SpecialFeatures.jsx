@@ -1,4 +1,5 @@
 import React from "react";
+import style from "./styles.module.css";
 
 const SpecialFeatures = () => {
 	return (
@@ -19,10 +20,15 @@ const SpecialFeatures = () => {
 											Best Quality
 										</h3>
 										<p className="mb-16 text-sm">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-											sed do eiusmod tempor incididunt ut et dolore magna
-											aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-											ullamco laboris nisi ut aliquip ex.
+											Quality is not just a promise; It is the core of our
+											philosophy. At{" "}
+											<span className={style.nameCompany}>
+												Alpha's Flooring LLC
+											</span>
+											, we believe that every customer deserves the best, and
+											that is precisely what we offer: the highest quality
+											hardwood floors that endure in their splendor, creating a
+											legacy of beauty and durability.
 										</p>
 									</div>
 								</div>
@@ -36,10 +42,11 @@ const SpecialFeatures = () => {
 											24/7 Support
 										</h3>
 										<p className="mb-16 text-sm">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-											sed do eiusmod tempor incididunt ut et dolore magna
-											aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-											ullamco laboris nisi ut aliquip ex.
+											With our 24/7 support, you can have peace of mind knowing
+											that we are there for you anytime, anywhere. Your comfort
+											and satisfaction are our top priority, and we strive to
+											provide you with exceptional service that exceeds your
+											expectations, even in the most unexpected moments.
 										</p>
 									</div>
 								</div>
@@ -53,10 +60,12 @@ const SpecialFeatures = () => {
 											Competitive price
 										</h3>
 										<p className="mb-16 text-sm">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-											sed do eiusmod tempor incididunt ut et dolore magna
-											aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-											ullamco laboris nisi ut aliquip ex.
+											We strive to keep our prices competitive by optimizing our
+											processes, efficiencies in resource management, and
+											negotiating advantageous agreements with suppliers. This
+											allows us to offer you top-notch products and services at
+											prices that fit your budget, without compromising quality
+											or service.
 										</p>
 									</div>
 								</div>

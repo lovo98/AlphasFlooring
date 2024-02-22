@@ -88,14 +88,24 @@ const index = () => {
 										location.pathname === "/testimonials" && style.link_active
 									}`}
 								>
-									<a className={style.cursor_pointer}>Testimonials</a>
+									<a
+										className={style.cursor_pointer}
+										onClick={() => navigate("/testimonials")}
+									>
+										Testimonials
+									</a>
 								</li>
 								<li
 									className={`${
 										location.pathname === "/services" && style.link_active
 									}`}
 								>
-									<a className={style.cursor_pointer}>Services</a>
+									<a
+										className={style.cursor_pointer}
+										onClick={() => navigate("/services")}
+									>
+										Services
+									</a>
 								</li>
 								<li
 									className={`${

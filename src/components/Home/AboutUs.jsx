@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import style from "./styles.module.css";
 
 const AboutUs = () => {
 	const navigate = useNavigate();
@@ -11,10 +12,13 @@ const AboutUs = () => {
 						<div className="container-xs">
 							<h2 className="mt-0 mb-16">About us</h2>
 							<p className="m-0">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-								sint, eos facere reiciendis laboriosam, architecto officiis quis
-								voluptates doloribus temporibus dolore accusamus eligendi enim
-								ullam debitis aperiam distinctio dicta expedita.
+								At{" "}
+								<span className={style.nameCompany}>Alpha's Flooring LLC</span>,
+								we are proud to offer exceptional solutions in installation,
+								restoration and maintenance of wooden floors of the highest
+								quality. With a passionate dedication to craftsmanship and
+								excellence, we have established a solid reputation as leaders in
+								the industry From the wood.
 							</p>
 						</div>
 					</div>

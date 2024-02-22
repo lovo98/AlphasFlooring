@@ -14,11 +14,11 @@
 			"~/*": [
 				"src/*"
 			],
-			"~AboutUs/*": [
-				"src/components/AboutUs/*"
+			"~Services/*": [
+				"src/components/Services/*"
 			],
-			"~ContactUS/*": [
-				"src/components/ContactUS/*"
+			"~ServicesPage/*": [
+				"src/components/ServicesPage/*"
 			]
 		}
 	}

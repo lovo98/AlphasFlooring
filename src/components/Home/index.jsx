@@ -4,8 +4,10 @@ import AboutUs from "./AboutUs";
 import SpecialFeatures from "./SpecialFeatures";
 import Testimonials from "./Testimonials";
 import Services from "./Services";
+import { useNavigate } from "react-router-dom";
 
 const index = () => {
+	const navigate = useNavigate();
 	return (
 		<main className="site-content">
 			<section className="hero section has-bg-color invert-color">
@@ -21,7 +23,7 @@ const index = () => {
 									<div className="button-group">
 										<a
 											className="button button-primary button-wide-mobile"
-											href="/"
+											onClick={() => navigate("/services")}
 										>
 											Quote now
 										</a>

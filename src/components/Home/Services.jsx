@@ -1,6 +1,9 @@
 import React from "react";
+import style from "./styles.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+	const navigate = useNavigate();
 	return (
 		<section className="pricing section has-bg-color">
 			<div className="container">
@@ -9,9 +12,14 @@ const Services = () => {
 						<div className="container-xs">
 							<h2 className="mt-0 mb-16">Services</h2>
 							<p className="m-0">
-								Vitae aliquet nec ullamcorper sit amet risus nullam eget felis
-								semper quis lectus nulla at volutpat diam ut venenatis tellus in
-								ornare.
+								Discover the difference our exceptional services can make to
+								your project. With{" "}
+								<span className={style.nameCompanyBold}>
+									Alpha's Flooring LLC
+								</span>
+								, you not only get quality products, but also a service
+								experience that will leave you completely satisfied and ready to
+								face new challenges with confidence.
 							</p>
 						</div>
 					</div>
@@ -42,7 +50,10 @@ const Services = () => {
 									</div>
 								</div>
 								<div className="pricing-item-cta mb-8">
-									<a className="button button-primary button-block" href="#">
+									<a
+										className="button button-primary button-block"
+										onClick={() => navigate("/services")}
+									>
 										Quote now
 									</a>
 								</div>
@@ -79,7 +90,10 @@ const Services = () => {
 									</div>
 								</div>
 								<div className="pricing-item-cta mb-8">
-									<a className="button button-primary button-block" href="#">
+									<a
+										className="button button-primary button-block"
+										onClick={() => navigate("/services")}
+									>
 										Quote now
 									</a>
 								</div>
@@ -118,7 +132,10 @@ const Services = () => {
 									</div>
 								</div>
 								<div className="pricing-item-cta mb-8">
-									<a className="button button-primary button-block" href="#">
+									<a
+										className="button button-primary button-block"
+										onClick={() => navigate("/services")}
+									>
 										Quote now
 									</a>
 								</div>
