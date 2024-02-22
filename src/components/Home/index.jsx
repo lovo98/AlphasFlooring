@@ -16,7 +16,7 @@ const index = () => {
 								<div className="hero-content split-item-content center-content-mobile reveal-from-top">
 									<h1 className="mt-0 mb-16">Alpha's Flooring LLC </h1>
 									<p className="mt-0 mb-32">
-										Floors that elevate your home to new levels!.
+										Floors that elevate your home to new levels!
 									</p>
 									<div className="button-group">
 										<a

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import logo from "~assets/images/logo.png";
 import style from "./styles.module.css";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const index = () => {
 	const [isNavActive, setIsNavActive] = useState(false);
 	const navigate = useNavigate();
+	const location = useLocation();
 
 	const handleNavToggle = () => {
 		setIsNavActive(!isNavActive);
@@ -31,6 +32,11 @@ const index = () => {
 			document.removeEventListener("click", handleOutsideClick);
 		};
 	}, []);
+
+	const navigateToUrl = (url) => {
+		setIsNavActive(false);
+		navigate(url);
+	};
 	return (
 		<header className="site-header invert-color">
 			<div className="container">
@@ -65,23 +71,39 @@ const index = () => {
 					>
 						<div className="header-nav-inner">
 							<ul className={`list-reset text-xs header-nav-right`}>
-								<li>
+								<li
+									className={`${
+										location.pathname === "/about-us" && style.link_active
+									}`}
+								>
 									<a
-										onClick={() => navigate("/about-us")}
+										onClick={() => navigateToUrl("/about-us")}
 										className={style.cursor_pointer}
 									>
 										About Us
 									</a>
 								</li>
-								<li>
+								<li
+									className={`${
+										location.pathname === "/testimonials" && style.link_active
+									}`}
+								>
 									<a className={style.cursor_pointer}>Testimonials</a>
 								</li>
-								<li>
+								<li
+									className={`${
+										location.pathname === "/services" && style.link_active
+									}`}
+								>
 									<a className={style.cursor_pointer}>Services</a>
 								</li>
-								<li>
+								<li
+									className={`${
+										location.pathname === "/contact-us" && style.link_active
+									}`}
+								>
 									<a
-										onClick={() => navigate("/contact-us")}
+										onClick={() => navigateToUrl("/contact-us")}
 										className={style.cursor_pointer}
 									>
 										Contact Us

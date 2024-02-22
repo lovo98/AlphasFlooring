@@ -11,3 +11,7 @@
 .cursor_pointer {
 	cursor: pointer;
 }
+
+.link_active {
+	border-bottom: 2px solid #613612;
+}
