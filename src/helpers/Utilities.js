@@ -6,7 +6,7 @@ export const formatearFecha = (fecha) => {
 		day: "2-digit",
 		// hour: "2-digit",
 		// minute: "2-digit",
-		timeZone: "America/El_Salvador",
+		// timeZone: "America/El_Salvador",
 	};
-	return fechaNueva.toLocaleDateString("es-ES", opciones);
+	return fechaNueva.toLocaleDateString("en-US", opciones);
 };
