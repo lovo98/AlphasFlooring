@@ -19,6 +19,9 @@
 			],
 			"~ServicesPage/*": [
 				"src/components/ServicesPage/*"
+			],
+			"~helpers/*": [
+				"src/helpers/*"
 			]
 		}
 	}

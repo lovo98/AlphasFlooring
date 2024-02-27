@@ -4,6 +4,64 @@ import { useNavigate } from "react-router-dom";
 
 const Services = () => {
 	const navigate = useNavigate();
+	const servicesA = [
+		{
+			id: 1,
+			plan: "Basic",
+			include: [
+				{ id: 1, status: true },
+				{ id: 1, status: true },
+				{ id: 1, status: true },
+				{ id: 1, status: false },
+				{ id: 1, status: false },
+			],
+		},
+		{
+			id: 1,
+			plan: "Standar",
+			include: [
+				{ id: 1, status: true },
+				{ id: 1, status: true },
+				{ id: 1, status: true },
+				{ id: 1, status: true },
+				{ id: 1, status: false },
+			],
+		},
+		{
+			id: 1,
+			plan: "Premium",
+			include: [
+				{ id: 1, status: true },
+				{ id: 1, status: true },
+				{ id: 1, status: true },
+				{ id: 1, status: true },
+				{ id: 1, status: true },
+			],
+		},
+	];
+
+	const listInclude = [
+		{
+			id: 1,
+			item: "Excepteur sint occaecat velit",
+		},
+		{
+			id: 2,
+			item: "Excepteur sint occaecat velit",
+		},
+		{
+			id: 3,
+			item: "Excepteur sint occaecat velit",
+		},
+		{
+			id: 4,
+			item: "Excepteur sint occaecat velit",
+		},
+		{
+			id: 5,
+			item: "Excepteur sint occaecat velit",
+		},
+	];
 	return (
 		<section className="pricing section has-bg-color">
 			<div className="container">
@@ -24,123 +82,44 @@ const Services = () => {
 						</div>
 					</div>
 					<div className="tiles-wrap">
-						<div className="tiles-item reveal-from-bottom">
-							<div className="tiles-item-inner has-shadow">
-								<div className="pricing-item-content">
-									<div className="pricing-item-header pb-24 mb-24">
-										<div className="text-xs text-color-low">Basic</div>
-									</div>
-									<div className="pricing-item-features mb-40">
-										<div className="pricing-item-features-title h6 text-xs text-color-high mb-24">
-											What’s included
+						{servicesA.map((service, index) => (
+							<div className="tiles-item reveal-from-bottom" key={index}>
+								<div className="tiles-item-inner has-shadow">
+									<div className="pricing-item-content">
+										<div className="pricing-item-header pb-24 mb-24">
+											<div className="text-xs text-color-low">
+												{service.plan}
+											</div>
 										</div>
-										<ul className="pricing-item-features-list list-reset text-xs mb-32">
-											<li className="is-checked">
-												Excepteur sint occaecat velit
-											</li>
-											<li className="is-checked">
-												Excepteur sint occaecat velit
-											</li>
-											<li className="is-checked">
-												Excepteur sint occaecat velit
-											</li>
-											<li>Excepteur sint occaecat velit</li>
-											<li>Excepteur sint occaecat velit</li>
-										</ul>
+										<div className="pricing-item-features mb-40">
+											<div className="pricing-item-features-title h6 text-xs text-color-high mb-24">
+												What’s included
+											</div>
+											<ul className="pricing-item-features-list list-reset text-xs mb-32">
+												{service.include.map((item, index) => {
+													return (
+														<li
+															className={item.status ? "is-checked" : ""}
+															key={index}
+														>
+															{listInclude.find((i) => i.id === item.id).item}
+														</li>
+													);
+												})}
+											</ul>
+										</div>
 									</div>
-								</div>
-								<div className="pricing-item-cta mb-8">
-									<a
-										className="button button-primary button-block"
-										onClick={() => navigate("/services")}
-									>
-										Quote now
-									</a>
+									<div className="pricing-item-cta mb-8">
+										<a
+											className="button button-primary button-block"
+											onClick={() => navigate("/services")}
+										>
+											Quote now
+										</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div
-							className="tiles-item reveal-from-bottom"
-							data-reveal-delay="200"
-						>
-							<div className="tiles-item-inner has-shadow">
-								<div className="pricing-item-content">
-									<div className="pricing-item-header pb-24 mb-24">
-										<div className="text-xs text-color-low">Standar</div>
-									</div>
-									<div className="pricing-item-features mb-40">
-										<div className="pricing-item-features-title h6 text-xs text-color-high mb-24">
-											What’s included
-										</div>
-										<ul className="pricing-item-features-list list-reset text-xs mb-32">
-											<li className="is-checked">
-												Excepteur sint occaecat velit
-											</li>
-											<li className="is-checked">
-												Excepteur sint occaecat velit
-											</li>
-											<li className="is-checked">
-												Excepteur sint occaecat velit
-											</li>
-											<li className="is-checked">
-												Excepteur sint occaecat velit
-											</li>
-											<li>Excepteur sint occaecat velit</li>
-										</ul>
-									</div>
-								</div>
-								<div className="pricing-item-cta mb-8">
-									<a
-										className="button button-primary button-block"
-										onClick={() => navigate("/services")}
-									>
-										Quote now
-									</a>
-								</div>
-							</div>
-						</div>
-						<div
-							className="tiles-item reveal-from-bottom"
-							data-reveal-delay="400"
-						>
-							<div className="tiles-item-inner has-shadow">
-								<div className="pricing-item-content">
-									<div className="pricing-item-header pb-24 mb-24">
-										<div className="text-xs text-color-low">Premium</div>
-									</div>
-									<div className="pricing-item-features mb-40">
-										<div className="pricing-item-features-title h6 text-xs text-color-high mb-24">
-											What’s included
-										</div>
-										<ul className="pricing-item-features-list list-reset text-xs mb-32">
-											<li className="is-checked">
-												Excepteur sint occaecat velit
-											</li>
-											<li className="is-checked">
-												Excepteur sint occaecat velit
-											</li>
-											<li className="is-checked">
-												Excepteur sint occaecat velit
-											</li>
-											<li className="is-checked">
-												Excepteur sint occaecat velit
-											</li>
-											<li className="is-checked">
-												Excepteur sint occaecat velit
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div className="pricing-item-cta mb-8">
-									<a
-										className="button button-primary button-block"
-										onClick={() => navigate("/services")}
-									>
-										Quote now
-									</a>
-								</div>
-							</div>
-						</div>
+						))}
 					</div>
 				</div>
 			</div>

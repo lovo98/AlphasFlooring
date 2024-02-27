@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styleCss from "../AboutUs/styles.module.css";
 import contact_us_img from "~assets/images/contact_us.svg";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import { useLocation } from "react-router-dom";
 
 const index = () => {
 	const position = [29.7422301, -95.4729384];
+	const { pathname } = useLocation();
+
+	useEffect(() => {
+		window.scrollTo(0, 0); // Scrolls to top when component mounts
+	}, [pathname]);
 	return (
 		<section className="features-tabs section center-content has-bottom-divider mt-50">
 			<div className="container">
