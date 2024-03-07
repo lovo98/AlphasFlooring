@@ -17,7 +17,7 @@ const index = () => {
 						<nav className={`footer-nav ${style.text_position}`}>
 							<ul className="list-reset">
 								<li>
-									<FontAwesomeIcon icon={faPhone} /> 832-998-1983
+									<FontAwesomeIcon icon={faPhone} /> +1 832-998-1983
 								</li>
 								<li>
 									<FontAwesomeIcon icon={faEnvelope} />{" "}
