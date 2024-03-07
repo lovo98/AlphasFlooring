@@ -3410,7 +3410,6 @@ ul.pricing-item-features-list li.is-checked::after {
 		text-align: center;
 	}
 	.center-content-mobile img,
-	.center-content-mobile svg,
 	.center-content-mobile video {
 		margin-left: auto;
 		margin-right: auto;
