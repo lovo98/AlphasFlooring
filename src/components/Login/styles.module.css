@@ -1,0 +1,47 @@
+.frm {
+	width: 60%;
+}
+
+.containerFrm {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.btnLogin,
+.btnLogin:hover {
+	color: #fff !important;
+	background-color: #613612 !important;
+	border-color: #613612 !important;
+	width: 250px;
+}
+
+.img_about {
+	max-width: 378px;
+	margin-bottom: 15px;
+}
+
+@media screen and (max-width: 910px) {
+	.img_about {
+		max-width: 345px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.img_about {
+		max-width: 245px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.frm,
+	.btnLogin {
+		width: 100%;
+	}
+
+	.img_about {
+		max-width: 220px;
+	}
+}

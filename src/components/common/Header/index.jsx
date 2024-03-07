@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import logo from "~assets/images/logo.png";
 import style from "./styles.module.css";
 import { useLocation, useNavigate } from "react-router-dom";
+import useAuth from "~/hooks/useAuth";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const index = () => {
 	const [isNavActive, setIsNavActive] = useState(false);
 	const navigate = useNavigate();
 	const location = useLocation();
+	const { auth, cerrarSesion } = useAuth();
 
 	const handleNavToggle = () => {
 		setIsNavActive(!isNavActive);
@@ -71,6 +75,17 @@ const index = () => {
 					>
 						<div className="header-nav-inner">
 							<ul className={`list-reset text-xs header-nav-right`}>
+								{auth.name && (
+									<li>
+										<a
+											onClick={() => cerrarSesion()}
+											className={`${style.alingItems} ${style.cursor_pointer}`}
+										>
+											<FontAwesomeIcon icon={faCircle} color="green" />{" "}
+											{auth.name}
+										</a>
+									</li>
+								)}
 								<li
 									className={`${
 										location.pathname === "/about-us" && style.link_active
@@ -93,18 +108,6 @@ const index = () => {
 										onClick={() => navigateToUrl("/testimonials")}
 									>
 										Testimonials
-									</a>
-								</li>
-								<li
-									className={`${
-										location.pathname === "/services" && style.link_active
-									}`}
-								>
-									<a
-										className={style.cursor_pointer}
-										onClick={() => navigateToUrl("/services")}
-									>
-										Services
 									</a>
 								</li>
 								<li

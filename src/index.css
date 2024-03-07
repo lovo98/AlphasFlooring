@@ -3468,3 +3468,23 @@ ul.pricing-item-features-list li.is-checked::after {
 		justify-content: center;
 	}
 }
+
+.ant-card-bordered {
+	border: 1px solid #613612 !important;
+}
+
+.ant-card .ant-card-actions > li:not(:last-child) {
+	border-inline-end: 1px solid #613612 !important;
+}
+
+.ant-card .ant-card-actions {
+	border-top: 1px solid #613612 !important;
+}
+
+.ant-pagination .ant-pagination-item-active a {
+	color: #613612 !important;
+}
+
+.ant-pagination .ant-pagination-item-active {
+	border-color: #613612 !important;
+}

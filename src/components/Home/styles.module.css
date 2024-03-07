@@ -1,8 +1,4 @@
-.nameCompany {
-	color: #c59a6d;
-	font-weight: bold;
-}
-
-.nameCompanyBold {
-	font-weight: bold;
+.separate {
+	display: flex !important;
+	gap: 10px;
 }

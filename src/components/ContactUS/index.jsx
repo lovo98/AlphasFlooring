@@ -42,9 +42,9 @@ const index = () => {
 										<span className={styleCss.font_bold}>Address:</span> 2632
 										Yorktown st #549 Houston Texas 77056 <br />
 										<span className={styleCss.font_bold}>Telephone:</span>{" "}
-										713-270-7800 <br />
+										832-998-1983 <br />
 										<span className={styleCss.font_bold}>Email:</span>{" "}
-										prueba@gmail.com <br />
+										alphasflooring7@gmail.com <br />
 										<span className={styleCss.font_bold}>
 											Office Hours:
 										</span>{" "}

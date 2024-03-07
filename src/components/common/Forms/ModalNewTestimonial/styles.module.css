@@ -1,0 +1,38 @@
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.frm {
+	width: 70%;
+}
+
+.gap15 {
+	gap: 15px;
+}
+
+.standarBtn {
+	width: 200px;
+}
+
+.addBtn,
+.addBtn:hover {
+	background: #8a5e3b !important;
+	color: #fff !important;
+	border-color: #8a5e3b !important;
+}
+
+.cancelBtn,
+.cancelBtn:hover {
+	color: #8a5e3b !important;
+	border: 1px solid #8a5e3b !important;
+}
+
+@media screen and (max-width: 480px) {
+	.standarBtn,
+	.frm {
+		width: 100%;
+	}
+}

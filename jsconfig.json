@@ -22,6 +22,18 @@
 			],
 			"~helpers/*": [
 				"src/helpers/*"
+			],
+			"~config/*": [
+				"src/config/*"
+			],
+			"~Login/*": [
+				"src/components/Login/*"
+			],
+			"~context/*": [
+				"src/context/*"
+			],
+			"~hooks/*": [
+				"src/hooks/*"
 			]
 		}
 	}

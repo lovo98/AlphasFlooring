@@ -1,6 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import Routers from "~Routers/index";
 import { ConfigProvider } from "antd";
+import { AuthProvider } from "./context/AuthProvider";
 
 function App() {
 	return (
@@ -13,7 +14,9 @@ function App() {
 			}}
 		>
 			<BrowserRouter>
-				<Routers />
+				<AuthProvider>
+					<Routers />
+				</AuthProvider>
 			</BrowserRouter>
 		</ConfigProvider>
 	);
