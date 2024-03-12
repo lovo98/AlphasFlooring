@@ -11,9 +11,9 @@ const SpecialFeatures = () => {
 		},
 		{
 			id: 2,
-			title: "24/7 Support",
+			title: "Continuous Innovation",
 			description:
-				"With our 24/7 support, you can have peace of mind knowing that we are there for you anytime, anywhere. Your comfort and satisfaction are our top priority, and we strive to provide you with exceptional service that exceeds your expectations, even in the most unexpected moments.",
+				"At Alpha's Flooring LLC, we strive to stay at the forefront of the industry through continuous innovation. Our team of research and development experts work tirelessly to improve our products, providing our customers with design, technology and functionality, we are committed to offering flooring solutions that exceed your expectations and define standards of excellence in the industry.",
 		},
 		{
 			id: 3,

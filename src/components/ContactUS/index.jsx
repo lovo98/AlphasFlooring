@@ -64,7 +64,7 @@ const index = () => {
 									<br />
 									<div className={`button-group`}>
 										<a
-											className={`button button-primary button-wide-mobile ${style.separate}`}
+											className={`button button-primary ${style.separate}`}
 											onClick={() => redirectToWhatsApp()}
 										>
 											<svg
