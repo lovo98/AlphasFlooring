@@ -6,6 +6,7 @@ import { formatearFecha } from "~/helpers/Utilities";
 import Loading from "~components/common/Loading/Loading";
 import NewTestimonial from "~components/common/Forms/ModalNewTestimonial";
 import { showNotification } from "~components/common/Notifications";
+import style from "./styles.module.css";
 
 const Testimonials = () => {
 	const navigate = useNavigate();
@@ -66,8 +67,11 @@ const Testimonials = () => {
 															disabled
 														/>
 													</div>
-													<div className="timeline-item-content fw-700 h4 m-0 reveal-from-side">
+													<div className="timeline-item-content fw-700 m-0 reveal-from-side h4">
 														{element.title}
+														<p className={style.paragraph}>
+															{element.description}
+														</p>
 													</div>
 												</div>
 											</div>
