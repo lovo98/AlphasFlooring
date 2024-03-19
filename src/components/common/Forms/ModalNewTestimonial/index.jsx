@@ -64,7 +64,7 @@ const index = ({ setModal2Open }) => {
 					name="description"
 					rules={[{ required: true, message: "Please input description." }]}
 				>
-					<TextArea rows={4} showCount maxLength={150} />
+					<TextArea rows={4} showCount maxLength={300} />
 				</Form.Item>
 
 				<Form.Item
